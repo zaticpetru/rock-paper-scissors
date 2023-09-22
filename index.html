@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
-  Score
-  Rules
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-  You Picked
-  The House Picked
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="flex direction-column">
+    <div class="flex justify-center">
+      <header class="grow-1 p-1 m-x-3 m-y-2">
+        <h1>Rock Paper Scissors</h1>
+        <div class="score flex direction-column align-items-center p-1 p-x-2">
+          <span>SCORE</span>
+          <span class="score-counter"> 12 </span>
+        </div>
+      </header>
+    </div>
 
-  You Win
-  You Lose
+    <main class="flex justify-center">
+      <div class="game-container p-1 grow-1">
+        <div class="action-circle paper">
+          <div>
+            <img src="/images/icon-paper.svg" />
+          </div>
+        </div>
+        <div class="action-circle scissors">
+          <div>
+            <img src="/images/icon-scissors.svg" />
+          </div>
+        </div>
+        <div class="action-circle rock">
+          <div>
+            <img src="/images/icon-rock.svg" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <button class="btn-rules align-self-center m-x-3">RULES</button>
 
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>

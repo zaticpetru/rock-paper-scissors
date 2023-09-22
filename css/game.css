@@ -1,0 +1,63 @@
+.game-container {
+  aspect-ratio: 1 / 1;
+  background-image: url(/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65%;
+  place-items: center;
+  display: grid;
+  grid-template-areas:
+    "paper scissors"
+    "rock rock";
+  max-width: 35rem;
+  margin-inline: auto;
+}
+
+.rock {
+  grid-area: rock;
+  --custom-gradient: var(--rock-gradient);
+}
+
+.paper {
+  grid-area: paper;
+  --custom-gradient: var(--paper-gradient);
+}
+
+.scissors {
+  grid-area: scissors;
+  --custom-gradient: var(--scissors-gradient);
+}
+
+.action-circle {
+  aspect-ratio: 1 / 1;
+  height: 70%;
+  overflow: hidden;
+
+  border-radius: 100rem;
+  padding: 0.8rem;
+  background-image: linear-gradient(
+    to top,
+    var(--custom-gradient, var(--background-gradient))
+  );
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 300ms;
+}
+
+.action-circle:hover {
+  transform: scale(1.15);
+}
+
+.action-circle div {
+  background-color: var(--light-color);
+  aspect-ratio: 1 / 1;
+  width: 95%;
+  border-radius: 100rem;
+  display: grid;
+  place-items: center;
+}
+
+.action-circle img {
+  width: 50%;
+}
