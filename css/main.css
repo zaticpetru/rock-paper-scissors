@@ -10,6 +10,7 @@
 
 /* ! Breakpoints */
 /* - Mobile: 375px */
+/* middle point - 870px */
 /* - Desktop: 1366px */
 
 :root {
@@ -99,5 +100,68 @@ button {
 @media (min-width: 1366px) {
   .btn-rules {
     align-self: end;
+  }
+}
+
+.rules-dialog {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 2rem;
+  place-items: center;
+  grid-template-areas:
+    "title"
+    "image"
+    "button";
+}
+
+.rules-dialog .title {
+  grid-area: title;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: xx-large;
+  color: var(--dark-text);
+  text-align: center;
+  margin-block: 0;
+}
+
+.rules-dialog .image {
+  grid-area: image;
+  width: 80%;
+  max-width: 30rem;
+  min-width: 250px;
+  place-self: center;
+}
+.rules-dialog .button {
+  grid-area: button;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+@media (min-width: 870px) {
+  .rules-dialog {
+    border: none;
+    border-radius: 1rem;
+    gap: 0;
+    position: fixed;
+    width: 35rem;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%) translateY(-50%);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "title button"
+      "image image ";
+
+    padding-block-end: 3rem;
+  }
+  .rules-dialog .title {
+    place-self: center start;
+  }
+  .rules-dialog .button {
+    place-self: center end;
   }
 }
