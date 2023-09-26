@@ -16,16 +16,19 @@
 .rock {
   grid-area: rock;
   --custom-gradient: var(--rock-gradient);
+  --custom--shadow-color: hsl(349, 71%, 27%);
 }
 
 .paper {
   grid-area: paper;
   --custom-gradient: var(--paper-gradient);
+  --custom--shadow-color: hsl(230, 49%, 42%);
 }
 
 .scissors {
   grid-area: scissors;
   --custom-gradient: var(--scissors-gradient);
+  --custom--shadow-color: hsl(40, 84%, 33%);
 }
 
 .action-circle {
@@ -34,7 +37,7 @@
   overflow: hidden;
 
   border-radius: 100rem;
-  padding: 0.8rem;
+  padding: 1.2rem;
   background-image: linear-gradient(
     to top,
     var(--custom-gradient, var(--background-gradient))
@@ -43,6 +46,10 @@
   place-items: center;
   cursor: pointer;
   transition: transform 300ms;
+
+  box-shadow: 0rem 0.4rem 0rem
+      var(--custom--shadow-color, var(--light-shadow-color)),
+    0.2rem 1.2rem 0.5rem var(--dark-shadow-color);
 }
 
 .action-circle:hover {
@@ -50,6 +57,8 @@
 }
 
 .action-circle div {
+  box-shadow: inset 0rem 0.2em 0.2rem 0.2rem var(--light-shadow-color);
+
   background-color: var(--light-color);
   aspect-ratio: 1 / 1;
   width: 95%;

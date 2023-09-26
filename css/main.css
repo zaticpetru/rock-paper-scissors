@@ -13,7 +13,9 @@
 /* - Desktop: 1366px */
 
 :root {
-  --dark-text: hsl(229, 25%, 31%);
+  --light-shadow-color: hsl(229 25% 70%);
+  --dark-shadow-color: hsl(229 25% 15% / 0.7);
+  --dark-text: hsl(229 25% 31%);
   --score-text: hsl(229, 64%, 46%);
   --header-outline: hsl(217, 16%, 45%);
   --light-text: hsl(217, 16%, 95%);
