@@ -36,31 +36,43 @@
       </header>
     </div>
 
+    <div class="play-container opacity-0 z-index-back">
+      <p class="text player p-2">YOU PICKED</p>
+      <p class="text house p-2">THE HOUSE PICKED</p>
+      <div class="move player m-2 p-2"></div>
+      <div class="move house m-2 p-2"></div>
+      <div class="results flex direction-column align-items-center m-2 p-2">
+        YOU WIN!
+        <button class="play-again-button">PLAY AGAIN</button>
+      </div>
+    </div>
     <main class="flex justify-center">
       <div class="game-container p-1 grow-1">
-        <div class="action-circle paper">
+        <div class="action-circle paper" data-action="paper">
           <div>
             <img src="/images/icon-paper.svg" />
           </div>
         </div>
-        <div class="action-circle scissors">
+        <div class="action-circle scissors" data-action="scissors">
           <div>
             <img src="/images/icon-scissors.svg" />
           </div>
         </div>
-        <div class="action-circle rock">
+        <div class="action-circle rock" data-action="rock">
           <div>
             <img src="/images/icon-rock.svg" />
           </div>
         </div>
       </div>
     </main>
-    <button class="btn-rules align-self-center m-x-3">RULES</button>
+    <button id="open-rules-button" class="btn-rules align-self-center m-x-3">RULES</button>
 
-    <dialog class="rules-dialog p-2" open>
-      <p class="title p-2">Rules</p>
-      <img class="image " src="images/image-rules.svg" />
-        <button class="button p-2">✖</button>
+    <dialog id="rules-dialog">
+      <div class="rules-dialog">
+        <p class="title p-2">Rules</p>
+        <img class="image" src="images/image-rules.svg" />
+        <button id="close-rules-button" class="button p-2">✖</button>
+      </div>
     </dialog>
 
     <div class="attribution">
@@ -69,5 +81,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <script src="src/index.js" defer></script>
   </body>
 </html>

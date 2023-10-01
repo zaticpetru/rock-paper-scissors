@@ -50,6 +50,10 @@ body {
   min-height: 100vh;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   border: 3px solid var(--header-outline);
   border-radius: 0.5rem;
@@ -78,6 +82,10 @@ header .score {
   border-radius: 0.5rem;
 }
 
+main {
+  min-height: 55vh;
+}
+
 .score-counter {
   font-size: 2rem;
   font-weight: 800;
@@ -103,9 +111,15 @@ button {
   }
 }
 
+
 .rules-dialog {
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #eee;
+  color: var(--dark-text);
   display: grid;
   gap: 2rem;
   place-items: center;
@@ -133,10 +147,10 @@ button {
   place-self: center;
 }
 .rules-dialog .button {
+  color: var(--dark-text);
   grid-area: button;
   border: none;
   font-size: 3rem;
-  cursor: pointer;
 }
 
 @media (min-width: 870px) {
@@ -154,7 +168,7 @@ button {
     grid-template-rows: auto 1fr;
     grid-template-areas:
       "title button"
-      "image image ";
+      "image image";
 
     padding-block-end: 3rem;
   }
@@ -164,4 +178,12 @@ button {
   .rules-dialog .button {
     place-self: center end;
   }
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.z-index-back {
+  z-index: -1;
 }
