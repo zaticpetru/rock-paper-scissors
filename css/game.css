@@ -124,7 +124,12 @@
 
 .play-container .move {
   background-color: var(--header-outline);
-  width: 100px;
+  aspect-ratio: 1 / 1;
   height: 100px;
   border-radius: 35rem;
+}
+
+.play-container .action-circle {
+  aspect-ratio: 1 / 1;
+  height: 100%;
 }
