@@ -80,19 +80,21 @@
 .play-container {
   z-index: 1;
   position: fixed;
-  width: 100%;
-  height: 100%;
   transition: opacity 1500ms;
   display: grid;
-  grid-template-columns: 1fr auto auto 1fr;
-  grid-template-rows: 1fr auto auto auto 1fr;
+  grid-template-columns: 1fr 1fr;
   place-items: center;
   grid-template-areas: 
-    ". . . ."
-    ". move-player move-house ."
-    ". text-player text-house ."
-    ". results results ."
-    ". . . .";
+    "move-player move-house"
+    "text-player text-house"
+    "results results";
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 55%;
+  max-width: 50rem;
 }
 
 .play-container .move.player {
@@ -113,13 +115,28 @@
 
 .play-container .text {
   text-align: center;
-  width: 21ch;
-  font-size: 12px;
-  font-weight: 900;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .play-container .results {
   grid-area: results;
+}
+
+.results p {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  word-spacing: 1rem;
+}
+
+.results button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  background-color: var(--light-color);
+  border: none;
+  align-self: stretch;
 }
 
 .play-container .move {
@@ -131,5 +148,24 @@
 
 .play-container .action-circle {
   aspect-ratio: 1 / 1;
-  height: 100%;
+  height: 75%;
+}
+@media (min-width: 870px) {
+  .play-container .action-circle {
+    height: 65%;
+  }
+
+  .play-container {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: 
+    "move-player results move-house"
+    "text-player results text-house";
+  }
+
+  .play-container .results {
+    margin-inline: 2rem;
+  }
+  .results p {
+    letter-spacing: -3px;
+  }
 }

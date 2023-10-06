@@ -13,6 +13,10 @@
 /* middle point - 870px */
 /* - Desktop: 1366px */
 
+* {
+  margin: 0;
+}
+
 :root {
   --light-shadow-color: hsl(229 25% 70%);
   --dark-shadow-color: hsl(229 25% 15% / 0.7);

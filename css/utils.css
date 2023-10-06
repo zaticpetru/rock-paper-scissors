@@ -71,6 +71,10 @@
   margin-inline: auto;
 }
 
+.m-y-1 {
+  margin-block: var(--base-spacing);
+}
+
 .m-y-2 {
   margin-block: calc(var(--base-spacing) * 2);
 }

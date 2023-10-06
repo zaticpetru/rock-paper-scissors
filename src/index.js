@@ -12,6 +12,7 @@ const actionCircles = document.querySelectorAll(".action-circle");
 const playAgainButton = document.querySelector(".play-again-button");
 
 const resultsParagraph = document.querySelector("#results");
+const resultsContainer = document.querySelector(".results");
 
 let moveHouse;
 let movePlayer;
@@ -97,6 +98,7 @@ function renderResults() {
     resultsParagraph.innerHTML = "YOU LOSE!";
     score--;
   }
+  resultsContainer.classList.remove("opacity-0")
   saveScore();
 }
 
@@ -107,6 +109,7 @@ actionCircles.forEach((actionCircle) => {
     gameContainer.classList.add("opacity-0");
     playContainer.classList.remove("z-index-back");
     playContainer.classList.remove("opacity-0");
+    resultsContainer.classList.add("opacity-0");
 
     const action_circle = event.target.closest(".action-circle");
     console.log(action_circle.dataset.action);
