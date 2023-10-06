@@ -1,6 +1,6 @@
 .game-container {
   aspect-ratio: 1 / 1;
-  background-image: url(/images/bg-triangle.svg);
+  background-image: url(./images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 65%;
