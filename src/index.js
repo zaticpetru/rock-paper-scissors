@@ -95,13 +95,14 @@ function renderResults() {
     score++;
   }
   if (gameRules[moveHouse] == movePlayer) {
-    resultsParagraph.innerHTML = "YOU LOSE!";
+    resultsParagraph.innerHTML = "YOU LOSE";
     score--;
   }
   resultsContainer.classList.remove("display-none");
+  playContainer.classList.add("with-results");
   setTimeout(() => {
     resultsContainer.classList.remove("opacity-0");
-  }, 100);
+  }, 500);
   saveScore();
 }
 
@@ -109,9 +110,8 @@ let score = retrieveScore();
 
 actionCircles.forEach((actionCircle) => {
   actionCircle.addEventListener("click", (event) => {
-    gameContainer.classList.add("opacity-0");
-    playContainer.classList.remove("z-index-back");
-    playContainer.classList.remove("opacity-0");
+    gameContainer.classList.add("opacity-0", "display-none");
+    playContainer.classList.remove("opacity-0", "display-none");
     resultsContainer.classList.add("opacity-0", "display-none");
 
     const action_circle = event.target.closest(".action-circle");
@@ -122,10 +122,9 @@ actionCircles.forEach((actionCircle) => {
 });
 
 playAgainButton.addEventListener("click", (event) => {
-  console.log("play again");
-  playContainer.classList.add("z-index-back");
-  playContainer.classList.add("opacity-0");
-  gameContainer.classList.remove("opacity-0");
+  playContainer.classList.remove("with-results");
+  playContainer.classList.add("opacity-0", "display-none");
+  gameContainer.classList.remove("opacity-0", "display-none");
 
   playContainer
     .querySelectorAll(".move.action-circle")
