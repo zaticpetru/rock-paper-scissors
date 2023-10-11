@@ -98,7 +98,10 @@ function renderResults() {
     resultsParagraph.innerHTML = "YOU LOSE!";
     score--;
   }
-  resultsContainer.classList.remove("opacity-0")
+  resultsContainer.classList.remove("display-none");
+  setTimeout(() => {
+    resultsContainer.classList.remove("opacity-0");
+  }, 100);
   saveScore();
 }
 
@@ -109,7 +112,7 @@ actionCircles.forEach((actionCircle) => {
     gameContainer.classList.add("opacity-0");
     playContainer.classList.remove("z-index-back");
     playContainer.classList.remove("opacity-0");
-    resultsContainer.classList.add("opacity-0");
+    resultsContainer.classList.add("opacity-0", "display-none");
 
     const action_circle = event.target.closest(".action-circle");
     console.log(action_circle.dataset.action);

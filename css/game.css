@@ -32,9 +32,12 @@
   --custom--shadow-color: hsl(40, 84%, 33%);
 }
 
+.game-container .action-circle { 
+  height: 70%;
+}
+
 .action-circle {
   aspect-ratio: 1 / 1;
-  height: 70%;
   overflow: hidden;
 
   border-radius: 100rem;
@@ -113,14 +116,9 @@
   grid-area: text-house;
 }
 
-.play-container .text {
-  text-align: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
 .play-container .results {
   grid-area: results;
+  transition: opacity 500ms;
 }
 
 .results p {
@@ -142,29 +140,44 @@
 .play-container .move {
   background-color: var(--header-outline);
   aspect-ratio: 1 / 1;
-  height: 100px;
   border-radius: 35rem;
+  align-self: center;
+}
+
+.play-container .text {
+  letter-spacing: 2px;
+  transform: scaleX(0.85);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .play-container .action-circle {
   aspect-ratio: 1 / 1;
-  height: 75%;
+  width: 75%;
 }
 @media (min-width: 870px) {
   .play-container .action-circle {
-    height: 65%;
+    width: 65%;
   }
 
   .play-container {
     grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas: 
-    "move-player results move-house"
-    "text-player results text-house";
+    "text-player results text-house"
+    "move-player results move-house";
   }
 
   .play-container .results {
     margin-inline: 2rem;
   }
+
+  .play-container .text {
+    font-size: 1.1rem;
+    margin-block: 3rem;
+  }
+
   .results p {
     letter-spacing: -3px;
   }
