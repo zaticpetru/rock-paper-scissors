@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./screenshots/desktop1.png" height=500>
-<img src="./screenshots/desktop2draw.png" height=500>
+<img src="./screenshots/desktop1.png">
+<img src="./screenshots/desktop2draw.png">
 
 
 <p float="left">
