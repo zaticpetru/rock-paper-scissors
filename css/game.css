@@ -81,7 +81,7 @@
 
 .play-container {
   z-index: 1;
-  transition: all 500ms;
+  transition: all 1000ms;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
@@ -117,7 +117,8 @@
 
 .play-container .results {
   grid-area: results;
-  transition: opacity 500ms;
+  transition: opacity 1000ms;
+  text-wrap: nowrap;
 }
 
 .results p {
@@ -163,7 +164,6 @@
   }
 
   .play-container {
-    transition: all 500ms;
     grid-template-columns: 1fr 2rem 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
