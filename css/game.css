@@ -141,6 +141,7 @@
   aspect-ratio: 1 / 1;
   border-radius: 35rem;
   align-self: center;
+  width: 70%;
 }
 
 .play-container .text {
