@@ -27,13 +27,21 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/desktop1.png)
-![](./screenshots/desktop2draw.png)
+<style>
+  img[max-height="500"] {
+    max-height: 500px;
+  }
+</style>
 
-<img src="./screenshots/mobile1rules.png" height=500>
-<img src="./screenshots/mobile2.png" height=500>
-<img src="./screenshots/mobile3.png" height=500>
+<img src="./screenshots/desktop1.png" max-height=500>
+<img src="./screenshots/desktop2draw.png" max-height=500>
 
+
+<p float="left">
+  <img src="./screenshots/mobile1.png" max-height=500>
+  <img src="./screenshots/mobile2rules.png" max-height=500>
+  <img src="./screenshots/mobile3results.png" max-height=500>
+</p>
 
 ### Links
 
@@ -95,12 +103,12 @@ CSS
 To create the effect 3 shadows are used, 1 of them inset and 2 
 
 1. Shadow used to create a darker shade of material on the bottom of the circle.
-<img src="./screenshots/border-1-gif.gif" height=200>
+<img src="./screenshots/border-1-gif.gif" max-height=400>
 
 2. General dark shadow for the whole element.
 
 3. Inset shadow to create a ilustion that the border is higher then the inside of the circle.
-<img src="./screenshots/border-2-gif.gif" height=200>
+<img src="./screenshots/border-2-gif.gif" max-height=400>
 
 
 ### Continued development
