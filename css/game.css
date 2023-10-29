@@ -118,7 +118,7 @@
 .play-container .results {
   grid-area: results;
   transition: opacity 1000ms;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .results p {
