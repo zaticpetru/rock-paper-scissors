@@ -61,7 +61,7 @@ HTML:
       <div class="game-container">
         <div class="action-circle paper" data-action="paper">
           <div>
-            <img src="./images/icon-paper.svg" />
+            <img src="./images/icon-paper.svg" alt="paper-image"/>
           </div>
         </div>
         ....

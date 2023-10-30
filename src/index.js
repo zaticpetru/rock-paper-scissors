@@ -58,7 +58,7 @@ function renderPlayerAction(action) {
   const innerHTML = `
   <div class="move player action-circle ${action}" data-action="${action}">
     <div>
-      <img src="./images/icon-${action}.svg" />
+      <img src="./images/icon-${action}.svg" alt="${action}-image"/>
     </div>
   </div>
   `;
@@ -74,7 +74,7 @@ function renderHouseAction() {
   const innerHTML = `
   <div class="move house action-circle ${action}" data-action="${action}">
     <div>
-      <img src="./images/icon-${action}.svg" />
+      <img src="./images/icon-${action}.svg" alt="${action}-image"/>
     </div>
   </div>
   `;

@@ -227,3 +227,12 @@ dialog:modal {
 .z-index-back {
   z-index: -1;
 }
+
+.attribution {
+  font-size: smaller;
+  text-align: center;
+  padding-block: 1rem 2rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
