@@ -1,18 +1,21 @@
-import { htmlTemplate } from "../utils/html-template.js";
-
-const innerHTML = /*html*/`
-  <div is="action-circle" data-action="paper"></div>
-  <div is="action-circle" data-action="scissors"></div>
-  <div is="action-circle" data-action="rock"></div>
-`;
+import ActionCircle from "./action-circle.js";
 
 export default class GameContainer extends HTMLDivElement {
-  constructor() {
+  constructor({ actionClick }) {
     super();
-    this.classList.add("game-container", "p-1", "grow-1")
-  }
-  
-  connectedCallback() {
-    this.appendChild(htmlTemplate(innerHTML));
+    this.classList.add("game-container", "p-1", "grow-1");
+
+    this.actionList = ["paper", "scissors", "rock"];
+
+    this.actionList.forEach((action) => {
+      const actionCircle = new ActionCircle(action);
+
+      actionCircle.addEventListener("click", (event) => {
+        const actionCircle = event.target.closest(".action-circle");
+        actionClick(actionCircle.dataset.action);
+      });
+
+      this.appendChild(actionCircle);
+    });
   }
 }

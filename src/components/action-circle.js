@@ -1,4 +1,4 @@
-import { htmlTemplate } from "../utils/html-template.js"
+import { htmlTemplate } from "../utils/html-helpers.js"
 
 const template = /*html*/`
   <div>
@@ -6,10 +6,14 @@ const template = /*html*/`
   </div>
 `
 
-export class ActionCircle extends HTMLDivElement {
-  constructor() {
+export default class ActionCircle extends HTMLDivElement {
+  constructor(action) {
     super()
     this.action = null;
+    if(action) {
+      this.action = action;
+      this.dataset.action = action;
+    }
     this.classList.add("action-circle")
   }
 
@@ -21,6 +25,10 @@ export class ActionCircle extends HTMLDivElement {
       return;
     }
 
+    this.render()
+  }
+  
+  render() {
     this.appendChild(htmlTemplate(template))
     const img = this.querySelector("img");
     img.src = `./images/icon-${this.action}.svg`
