@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -26,36 +25,9 @@
       </header>
     </div>
 
-
-    <main class="flex justify-center dis">
-      <div class="play-container opacity-0 display-none">
-        <p class="text player">YOU PICKED</p>
-        <p class="text house">THE HOUSE PICKED</p>
-        <div class="move player m-2 p-2"></div>
-        <div class="move house m-2 p-2"></div>
-        <div class="results flex direction-column align-items-center">
-          <p id="results">TEXT</p>
-          <button class="play-again-button p-1 m-y-1 p-x-3">PLAY AGAIN</button>
-        </div>
-      </div>
-      <div class="game-container p-1 grow-1">
-        <div class="action-circle paper" data-action="paper">
-          <div>
-            <img src="./images/icon-paper.svg" alt="paper-image" />
-          </div>
-        </div>
-        <div class="action-circle scissors" data-action="scissors">
-          <div>
-            <img src="./images/icon-scissors.svg" alt="scissors-image"/>
-          </div>
-        </div>
-        <div class="action-circle rock" data-action="rock">
-          <div>
-            <img src="./images/icon-rock.svg" alt="rock-image" />
-          </div>
-        </div>
-      </div>
+    <main class="flex justify-center" is=main-app>
     </main>
+
     <button id="open-rules-button" class="btn-rules align-self-center m-x-3">RULES</button>
 
     <dialog id="rules-dialog">
@@ -73,6 +45,7 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </footer>
 
-    <script src="src/index.js" defer></script>
+    <script type="module" src="./src/app.js"></script>
+    <script src="./src/index.js" defer></script>
   </body>
 </html>
