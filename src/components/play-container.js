@@ -8,7 +8,7 @@ const innerHTML = /*html*/ `
   <p class="text house">THE HOUSE PICKED</p>
   <div class="move player m-2 p-2"></div>
   <div class="move house m-2 p-2"></div>
-  <div class="results flex direction-column align-items-center">
+  <div class="results opacity-0 display-none flex direction-column align-items-center">
     <p id="results">TEXT</p>
     <button class="play-again-button p-1 m-y-1 p-x-3">PLAY AGAIN</button>
   </div>
