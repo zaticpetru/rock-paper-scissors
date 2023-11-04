@@ -1,3 +1,5 @@
+import { htmlTemplate } from "../utils/html-helpers.js";
+
 const template = /*html*/ `
   <div>
     <img src="./images/icon-paper.svg" alt="paper-image" />
