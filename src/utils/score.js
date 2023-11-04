@@ -21,6 +21,6 @@ class Score {
   }
 }
 
-const score = new Score()
+const score = new Score();
 
 export default score;
